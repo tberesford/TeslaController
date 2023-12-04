@@ -189,7 +189,7 @@ def get_powerwall_data():
 
 
 def get_weather_data():
-    response = requests.get("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/DE656NJ?unitGroup=metric&key=KGWK5TLATAR9LNNNDF4J9CZV4&contentType=json")
+    response = requests.get("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/ADDRESS?unitGroup=metric&key=KEY&contentType=json")
     days = response.json()['days']
     weather_log = []
     for day in days:
