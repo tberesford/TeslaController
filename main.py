@@ -4,9 +4,9 @@ import teslapy as tp
 import time
 import os
 import datetime
-from datetime import datetime, timedelta
 import logging
 import mysql.connector
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
