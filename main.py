@@ -15,7 +15,8 @@ logging.basicConfig(level=logging.INFO)
 load_dotenv()
 
 EMAIL = os.getenv("EMAIL")
-FILENAME = os.getenv("FILENAME")
+API_KEY = os.getenv("API_KEY")
+ADDRESS = os.getenv("ADDRESS")
 
 # Change these details to match your exchange rates and periods
 BUY_LOW = 2     # Start time at which you can buy electricity cheap
@@ -25,6 +26,7 @@ MIN_BATTERY_RESERVE = 20  # Your minimum battery reserve - personal preference
 
 MAX_RETRIES = 30
 RETRY_DELAY = 12
+FILENAME = "battery_data.xlsx"
 
 
 def get_seconds_until_next_hour(target_hour):
@@ -189,7 +191,7 @@ def get_powerwall_data():
 
 
 def get_weather_data():
-    response = requests.get("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/DE656NJ?unitGroup=metric&key=KGWK5TLATAR9LNNNDF4J9CZV4&contentType=json")
+    response = requests.get(f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{ADDRESS}?unitGroup=metric&key={API_KEY}&contentType=json")
     days = response.json()['days']
     weather_log = []
     for day in days:
