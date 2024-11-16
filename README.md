@@ -7,7 +7,7 @@ A Tesla Powerwall Controller!
 Connected to a MySQL database storing National Grid data, the program utilises forecasted solar production to predict how much electricity from solar my area will produce prior to 4pm.
 Using this information, I can estimate to an accuracy of 90%~ how much I need to charge between 2am-5am to ensure the Tesla Powerwall Battery is at 100% by 4pm.
 
-The data of this database can be seen at: https://www.going-green.live
+The data of this database can be seen at: https://www.powerdashboard.co.uk
 
 For any enquiries please contact me at tberesfords@outlook.com
 
